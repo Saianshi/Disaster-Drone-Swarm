@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!-- Per-drone SDF. Placeholders filled by the launch file / spawn helper:
+     __NS__  namespace + model name (drone_0 .. drone_5)
+     __X__ __Y__ __Z__ __YAW__  initial pose
+     __R__ __G__ __B__  id-marker colour -->
+<sdf version="1.7">
+  <model name="__NS__">
+    <pose>__X__ __Y__ __Z__ 0 0 __YAW__</pose>
+
+    <link name="base_link">
+      <!-- hover controller is kinematic (mission node sets state); no gravity -->
+      <gravity>false</gravity>
+      <inertial>
+        <mass>1.8</mass>
+        <inertia>
+          <ixx>0.03</ixx><iyy>0.03</iyy><izz>0.05</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
+
+      <visual name="body">
+        <pose>0 0 0.143 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://sar_drone/meshes/drone.dae</uri><scale>0.45 0.45 0.45</scale></mesh>
+        </geometry>
+      </visual>
+
+      <!-- bright per-drone id beacon so drones are tellable apart on video -->
+      <visual name="id_marker">
+        <pose>0 0 0.34 0 0 0</pose>
+        <geometry><sphere><radius>0.11</radius></sphere></geometry>
+        <material>
+          <ambient>__R__ __G__ __B__ 1</ambient>
+          <diffuse>__R__ __G__ __B__ 1</diffuse>
+          <emissive>__R__ __G__ __B__ 1</emissive>
+        </material>
+      </visual>
+
+      <collision name="body_col">
+        <pose>0 0 0.143 0 0 0</pose>
+        <geometry><box><size>1.31 1.21 0.19</size></box></geometry>
+      </collision>
+
+      <!-- downward-tilted RGB camera (~31 deg below horizontal), on a short
+           forward boom so the drone's own airframe is out of frame -->
+      <sensor name="camera" type="camera">
+        <pose>0.80 0 0.05 0 0.72 0</pose>
+        <camera>
+          <horizontal_fov>1.40</horizontal_fov>
+          <image><width>640</width><height>480</height><format>R8G8B8</format></image>
+          <clip><near>0.1</near><far>400</far></clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>15</update_rate>
+        <visualize>true</visualize>
+        <plugin name="camera_plugin" filename="libgazebo_ros_camera.so">
+          <ros>
+            <namespace>__NS__</namespace>
+            <remapping>~/image_raw:=camera/image_raw</remapping>
+            <remapping>~/camera_info:=camera/camera_info</remapping>
+          </ros>
+          <camera_name>camera</camera_name>
+          <frame_name>__NS__/camera_link</frame_name>
+        </plugin>
+      </sensor>
+    </link>
+
+    <!-- ground-truth odometry for RViz / TF cross-check -->
+    <plugin name="p3d" filename="libgazebo_ros_p3d.so">
+      <ros>
+        <namespace>__NS__</namespace>
+        <remapping>odom:=odom</remapping>
+      </ros>
+      <body_name>base_link</body_name>
+      <frame_name>world</frame_name>
+      <update_rate>30</update_rate>
+    </plugin>
+  </model>
+</sdf>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="disaster_city">
+    <static>true</static>
+    <link name="body">
+      <visual name="v">
+        <geometry><mesh><uri>model://disaster_city/meshes/mesh.dae</uri></mesh></geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

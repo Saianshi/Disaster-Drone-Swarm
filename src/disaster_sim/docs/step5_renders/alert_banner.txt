@@ -1,0 +1,8 @@
+  >>> ALERT  |  VICTIM LOCATED  <<<
+  detecting drone : drone_2
+  victim position : x=5.7  y=-95.0  z=7.7  (world)
+  detection       : OpenCV orange-contour  (blob 464px)
+  published to    : /base_station/alerts
+====================================================================
+
+[INFO] [1788118582.413620765] [mission_node]: ALERT published to /base_station/alerts

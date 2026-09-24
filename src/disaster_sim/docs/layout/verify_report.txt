@@ -1,0 +1,34 @@
+
+================ WORLD POSES ================
+  bldedge              (   85.00,   -35.00,   45.00)
+  damaged_building     (   46.00,     0.00,    0.33)   lowest geom Z = +0.000
+  disaster_city        (    0.00,     0.00,    0.00)   lowest geom Z = -1.470
+  drone_0              (  121.00,   -13.00,    0.15)
+  drone_1              (  124.00,   -13.00,    0.15)
+  drone_2              (  127.00,   -13.00,    0.15)
+  drone_3              (  121.00,   -16.00,    0.15)
+  drone_4              (  124.00,   -16.00,    0.15)
+  drone_5              (  127.00,   -16.00,    0.15)
+  fiveg_base_station   (  125.00,    -8.00,    0.60)   lowest geom Z = +0.000
+  los                  (  128.00,   -12.00,    8.00)
+  overhead             (   60.00,   -20.00,  240.00)
+  terrain              (   30.00,     0.00,   -0.05)   lowest geom Z = -0.050
+  victim               (   51.05,     0.00,    6.34)   lowest geom Z = +6.340
+  victim_nook          (   46.00,     0.00,    0.33)
+
+  damaged_building bbox X[34.8,58.5] Y[-5.9,5.3]
+  gap to city footprint: 0.00 m  (within city Y span: True)
+
+  base station to building origin: 79.4 m
+
+  drone spawn Z: ['0.15', '0.15', '0.15', '0.15', '0.15', '0.15']
+  drone_0->drone_1 spacing: 3.00 m
+
+  scan wp (60.0, 0.0, 13.5): standoff 7.5 m, window depression 39.4 deg, cam pitch 41.3 deg, off-axis 1.9 deg (VFOV half 32.3 deg)
+
+================ RESULT ================
+  ALL CHECKS PASSED
+screenshot: /tmp/wcam/layout_overhead.jpg
+screenshot: /tmp/wcam/layout_bldedge.jpg
+screenshot: /tmp/wcam/layout_los.jpg
+/home/raj/disaster_sim_ws/src/disaster_sim/tools/verify_layout.sh: line 175: 117459 Killed                  timeout 150 gzserver --verbose /tmp/verify.world -s libgazebo_ros_init.so -s libgazebo_ros_factory.so > /tmp/verify_gz.log 2>&1

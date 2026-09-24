@@ -1,0 +1,34 @@
+  >>> ALERT  |  VICTIM LOCATED  <<<
+  detecting drone : drone_2
+  victim position : x=5.7  y=-95.0  z=7.7  (world)
+  detection       : OpenCV orange-contour  (blob 464px)
+  published to    : /base_station/alerts
+====================================================================
+
+[INFO] [1788119491.109483277] [mission_node]: ALERT published to /base_station/alerts
+[INFO] [1788119496.608477627] [mission_node]: --- phase: RTB ---
+[INFO] [1788119497.108720039] [mission_node]: objective met - drones returning to base
+
+[spawn_entity.py-2] [INFO] [1788119450.555660963] [spawn_drone_0]: Spawn status: SpawnEntity: Successfully spawned entity [drone_0]
+[INFO] [spawn_entity.py-2]: process has finished cleanly [pid 48988]
+[spawn_entity.py-3] [INFO] [1788119452.400822312] [spawn_drone_1]: Spawn status: SpawnEntity: Successfully spawned entity [drone_1]
+[INFO] [spawn_entity.py-3]: process has finished cleanly [pid 49029]
+[spawn_entity.py-4] [INFO] [1788119454.734192809] [spawn_drone_2]: Spawn status: SpawnEntity: Successfully spawned entity [drone_2]
+[INFO] [spawn_entity.py-4]: process has finished cleanly [pid 49056]
+[spawn_entity.py-5] [INFO] [1788119456.070479689] [spawn_drone_3]: Spawn status: SpawnEntity: Successfully spawned entity [drone_3]
+[INFO] [spawn_entity.py-5]: process has finished cleanly [pid 49075]
+[spawn_entity.py-6] [INFO] [1788119457.817487849] [spawn_drone_4]: Spawn status: SpawnEntity: Successfully spawned entity [drone_4]
+[INFO] [spawn_entity.py-6]: process has finished cleanly [pid 49094]
+[spawn_entity.py-7] [INFO] [1788119459.563099161] [spawn_drone_5]: Spawn status: SpawnEntity: Successfully spawned entity [drone_5]
+[INFO] [spawn_entity.py-7]: process has finished cleanly [pid 49124]
+[mission_node.py-9] [INFO] [1788119472.108664055] [mission_node]: --- phase: LAUNCH ---
+[mission_node.py-9] [INFO] [1788119475.108755089] [mission_node]: --- phase: FANOUT ---
+[mission_node.py-9] [INFO] [1788119480.108482771] [mission_node]: --- phase: APPROACH ---
+[mission_node.py-9] [INFO] [1788119484.608609595] [mission_node]: --- phase: SCAN ---
+[mission_node.py-9] [INFO] [1788119490.337082507] [mission_node]: orange contour confirmed (464px, 4 frames)
+[mission_node.py-9] [INFO] [1788119490.608476807] [mission_node]: --- phase: ALERT ---
+[mission_node.py-9] [INFO] [1788119496.608477627] [mission_node]: --- phase: RTB ---
+[INFO] [mission_node.py-9]: process has finished cleanly [pid 49219]
+[INFO] [launch.user]: mission_node finished - shutting the demo down
+[INFO] [swarm_controller.py-8]: process has finished cleanly [pid 49159]
+[INFO] [gzserver-1]: process has finished cleanly [pid 48656]

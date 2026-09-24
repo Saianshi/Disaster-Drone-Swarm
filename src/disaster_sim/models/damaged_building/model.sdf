@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="damaged_building">
+    <static>true</static>
+    <link name="body">
+      <visual name="v">
+        <geometry><mesh><uri>model://damaged_building/meshes/mesh.dae</uri></mesh></geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

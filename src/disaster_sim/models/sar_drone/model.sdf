@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="sar_drone">
+    <!-- Mesh from Drone.usdz (Sketchfab), USD->Collada direct export, Z-up metres.
+         Native span 2.92 m; scaled x0.45 -> 1.31 x 1.21 x 0.19 m.
+         Visual lifted +0.143 m so the model origin sits at the landing feet. -->
+    <link name="base_link">
+      <inertial>
+        <mass>1.8</mass>
+        <inertia><ixx>0.02</ixx><iyy>0.02</iyy><izz>0.035</izz>
+                 <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+      </inertial>
+      <visual name="body">
+        <pose>0 0 0.143 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://sar_drone/meshes/drone.dae</uri><scale>0.45 0.45 0.45</scale></mesh>
+        </geometry>
+      </visual>
+      <collision name="body_col">
+        <pose>0 0 0.143 0 0 0</pose>
+        <geometry><box><size>1.31 1.21 0.19</size></box></geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

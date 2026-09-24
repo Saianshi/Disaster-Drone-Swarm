@@ -1,0 +1,186 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 70
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Swarm markers1
+        - /ALERT1
+      Splitter Ratio: 0.5
+    Tree Height: 560
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz_common/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Visualization Manager:
+  Class: ""
+  Name: root
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Alpha: 0.4
+      Cell Size: 5
+      Color: 90; 90; 96
+      Line Style:
+        Line Width: 0.03
+        Value: Lines
+      Plane: XY
+      Plane Cell Count: 40
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Name: Drone TF frames
+      Enabled: true
+      Frame Timeout: 30
+      Marker Scale: 3
+      Show Arrows: false
+      Show Axes: true
+      Show Names: true
+      Update Interval: 0
+      Value: true
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Swarm markers
+      Enabled: true
+      Namespaces: {}
+      Topic:
+        Value: /swarm/markers
+        Depth: 20
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Value: true
+    - Class: rviz_default_plugins/Marker
+      Name: ALERT
+      Enabled: true
+      Namespaces: {}
+      Topic:
+        Value: /base_station/alert_marker
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Value: true
+    - Class: rviz_default_plugins/Camera
+      Name: SCANNER drone_2
+      Enabled: true
+      Topic:
+        Value: /drone_2/camera/image_raw
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+      Far Plane Distance: 100
+      Overlay Alpha: 0.6
+      Zoom Factor: 1
+      Value: true
+      Visibility:
+        Grid: false
+        Drone TF frames: false
+        Swarm markers: true
+        ALERT: true
+        drone_0 cam: false
+        drone_1 cam: false
+        drone_3 cam: false
+        drone_4 cam: false
+        drone_5 cam: false
+    - Class: rviz_default_plugins/Image
+      Name: drone_0 cam
+      Enabled: true
+      Max Value: 1
+      Min Value: 0
+      Median window: 5
+      Normalize Range: true
+      Topic: /drone_0/camera/image_raw
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Name: drone_1 cam
+      Enabled: true
+      Max Value: 1
+      Min Value: 0
+      Median window: 5
+      Normalize Range: true
+      Topic: /drone_1/camera/image_raw
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Name: drone_2 cam
+      Enabled: true
+      Max Value: 1
+      Min Value: 0
+      Median window: 5
+      Normalize Range: true
+      Topic: /drone_2/camera/image_raw
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Name: drone_3 cam
+      Enabled: true
+      Max Value: 1
+      Min Value: 0
+      Median window: 5
+      Normalize Range: true
+      Topic: /drone_3/camera/image_raw
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Name: drone_4 cam
+      Enabled: true
+      Max Value: 1
+      Min Value: 0
+      Median window: 5
+      Normalize Range: true
+      Topic: /drone_4/camera/image_raw
+      Value: true
+    - Class: rviz_default_plugins/Image
+      Name: drone_5 cam
+      Enabled: true
+      Max Value: 1
+      Min Value: 0
+      Median window: 5
+      Normalize Range: true
+      Topic: /drone_5/camera/image_raw
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 26; 28; 33
+    Fixed Frame: world
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+    - Class: rviz_default_plugins/Select
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Distance: 110
+      Focal Point:
+        X: 60
+        Y: 0
+        Z: 8
+      Near Clip Distance: 0.1
+      Pitch: 0.35
+      Yaw: 3.05
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Views:
+    collapsed: false
+  Time:
+    collapsed: false
+  Height: 1020
+  Width: 1780
+  Hide Left Dock: false
+  Hide Right Dock: false
+  X: 60
+  Y: 40

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="fiveg_base_station">
+    <static>true</static>
+    <link name="body">
+      <visual name="v">
+        <geometry><mesh><uri>model://fiveg_base_station/meshes/mesh.dae</uri></mesh></geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
