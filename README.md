@@ -2,7 +2,7 @@
 
 A ROS 2 + Gazebo simulation of a six drone search and rescue swarm responding to an earthquake damaged building. Built and tested on Ubuntu 22.04, ROS 2 Humble, and Gazebo Classic (Gazebo 11).
 
-![swarm hero shot](src/disaster_sim/docs/step3_renders/swarm_hero.jpg)
+![swarm hero shot](src/disaster_sim/docs/layout/Simulation_SS.png)
 
 ## What it does
 
